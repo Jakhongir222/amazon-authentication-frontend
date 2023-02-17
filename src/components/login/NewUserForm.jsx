@@ -24,7 +24,14 @@ function NewUserForm() {
       body: JSON.stringify(user)
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data);
+      localStorage.setItem('token', data.token);
+      alert('New user successfully registered');
+      setEmail(''); 
+      setPassword(''); 
+      setConfirmedPassword('');
+    })
     .catch(error => console.error(error));
   };
 
@@ -75,5 +82,6 @@ function NewUserForm() {
     </>
   );
 }
+
 
 export default NewUserForm;
