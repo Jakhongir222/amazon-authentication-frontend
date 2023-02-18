@@ -16,10 +16,8 @@ function LoginForm() {
 
     try {
       const response = await axios.post('http://localhost:8080/api/v1/auth/authenticate', user);
-      console.log(response.data);
-      console.log(response.data.email);
-      setLoggedInUser(response.data);
-      console.log(loggedInUser);
+      const { email, firstname, lastname } = response.data;
+      setLoggedInUser({ email, firstname, lastname });
     } catch (error) {
       console.error(error);
     }
@@ -28,7 +26,7 @@ function LoginForm() {
   return (
     <>
       {loggedInUser ? (
-        <p>Logged in as {loggedInUser.email}</p>
+       <p>Logged in as {loggedInUser ? `${loggedInUser.firstname} ${loggedInUser.lastname}` : ''}</p>
       ) : (
         <form onSubmit={handleSubmit}>
           <label htmlFor="email_input">Email</label>

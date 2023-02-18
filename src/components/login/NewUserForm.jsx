@@ -5,6 +5,8 @@ function NewUserForm() {
   const [password, setPassword] = useState('');
   const [confirmedPassword, setConfirmedPassword] = useState('');
   const [userType, setUserType] = useState('user');
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -13,7 +15,9 @@ function NewUserForm() {
       email: email,
       password: password,
       confirmedPassword: confirmedPassword,
-      userType: userType
+      userType: userType,
+      firstname: firstname,
+      lastname: lastname
     };
 
     fetch('http://localhost:8080/api/v1/auth/register', {
@@ -31,6 +35,8 @@ function NewUserForm() {
       setEmail(''); 
       setPassword(''); 
       setConfirmedPassword('');
+      setFirstname('');
+      setLastname('');
     })
     .catch(error => console.error(error));
   };
@@ -77,11 +83,28 @@ function NewUserForm() {
           <option value="admin">Admin</option>
         </select>
         <br/>
+        <label htmlFor="firstname_input">First name</label>
+        <input 
+          type="text"
+          placeholder="first name"
+          id="firstname_input"
+          value={firstname}
+          onChange={(e) => setFirstname(e.target.value)}
+        />
+        <br/>
+        <label htmlFor="lastname_input">Last name</label>
+        <input 
+          type="text"
+          placeholder="last name"
+          id="lastname_input"
+          value={lastname}
+          onChange={(e) => setLastname(e.target.value)}
+        />
+        <br/>
         <button type="submit">Submit</button>
       </form>
     </>
   );
 }
-
 
 export default NewUserForm;
