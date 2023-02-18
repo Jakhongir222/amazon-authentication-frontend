@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./Login.css"
+
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -24,11 +26,11 @@ function LoginForm() {
   };
 
   return (
-    <>
+    <div className="login-form-container">
       {loggedInUser ? (
-       <p>Logged in as {loggedInUser ? `${loggedInUser.firstname} ${loggedInUser.lastname}` : ''}</p>
+        <p className="login-success">Logged in as {loggedInUser ? `${loggedInUser.firstname} ${loggedInUser.lastname}` : ''}</p>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="login-form">
           <label htmlFor="email_input">Email</label>
           <input 
             type="email"
@@ -36,6 +38,7 @@ function LoginForm() {
             id="email_input"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="login-input"
           />
           <br/>
           <label htmlFor="password_input">Password</label>
@@ -45,13 +48,14 @@ function LoginForm() {
             id="password_input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="login-input"
           />
           <br/>
-          <button type="submit">Login</button>
+          <button type="submit" className="login-button">Login</button>
         </form>
       )}
-    </>
-  );
+    </div>
+  );  
 }
 
 export default LoginForm;

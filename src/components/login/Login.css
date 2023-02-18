@@ -1,7 +1,114 @@
-.login_form {
-
-}
-
 .create_user_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 
-}
+  }
+  
+  .create_user_form h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .create_user_form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .create_user_form input[type="email"],
+  .create_user_form input[type="password"],
+  .create_user_form input[type="text"],
+  .create_user_form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .create_user_form button[type="submit"] {
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .create_user_form button[type="submit"]:hover {
+    background-color: #0052cc;
+  }
+
+
+  
+  .login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-form-container p {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .login-form input[type="email"],
+  .login-form input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .login-form button[type="submit"] {
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-form button[type="submit"]:hover {
+    background-color: #0052cc;
+  }
+
+  
+  
+  
+  
+  
