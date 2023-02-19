@@ -2,7 +2,7 @@ function ProfileBar() {
     return (
         <>
             <div className={"login_info"}>
-                <h1>Logged in as User</h1>
+                <h1>Welcome to Amazon</h1>
             </div>
         </>
     )

@@ -17,7 +17,7 @@ function Cart({products, removeFromCart}) {
               )
             })
       }
-      <h3>Total price for items: {sumOfItems}</h3>
+      <h3>Total price for items: {sumOfItems} €</h3>
       </div>)
 }
 

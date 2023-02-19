@@ -8,7 +8,7 @@ function CartItem({product, removeFromCart}) {
             {product.title}
           </h2>
           <h3>Amount {product.amount}</h3>
-          <h3>Price {product.price}</h3>
+          <h3>Price {product.price} €</h3>
         </section>
         <button onClick={() => removeFromCart(product.id)}>Remove from Cart</button>
       </article>
